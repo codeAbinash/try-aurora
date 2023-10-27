@@ -35,7 +35,7 @@ function App() {
         </div>
         <div className="bg-gray-950 text-white gap-5 p-2 px-7 rounded-full flex">
           <p className="custom-font font-medium text-sm">
-            Highted in {highlightingTime.toFixed(1)} ms ✨{" "}
+            Highlighted in {highlightingTime.toFixed(1)} ms ✨{" "}
             {(code.match(/\n/g) || []).length} lines
           </p>
         </div>
