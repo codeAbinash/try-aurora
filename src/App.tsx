@@ -4,9 +4,8 @@ import "aurora-code/themes/one dark pro";
 
 async function loadCode() {
   const res = await fetch(
-    "https://codeabinash.github.io/c-dsa-generic/Data%20Structures/Stack/stack.c"
+    "https://codeabinash.github.io/c-dsa-generic/Data%20Structures/Vecotr/vector.c"
   );
-  // const res = await fetch('https://codeabinash.github.io/beyond-javascript/learning/c/dsa/circular_linked_list/main.c');
   let code = await res.text();
   code = code.replace(/\r/g, "");
   return code;
