@@ -3,9 +3,7 @@ import { Aurora } from "aurora-react";
 import "aurora-code/themes/one dark pro";
 
 async function loadCode() {
-  const res = await fetch(
-    "https://codeabinash.github.io/c-dsa-generic/Data%20Structures/Vector/vector.c"
-  );
+  const res = await fetch("https://codeabinash.github.io/aurora/test/example.c");
   let code = await res.text();
   code = code.replace(/\r/g, "");
   return code;
