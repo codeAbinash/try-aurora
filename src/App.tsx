@@ -4,7 +4,7 @@ import "aurora-code/themes/one dark pro";
 
 async function loadCode() {
   const res = await fetch(
-    "https://codeabinash.github.io/c-dsa-generic/Data%20Structures/Vecotr/vector.c"
+    "https://codeabinash.github.io/c-dsa-generic/Data%20Structures/Vector/vector.c"
   );
   let code = await res.text();
   code = code.replace(/\r/g, "");
