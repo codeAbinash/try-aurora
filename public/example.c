@@ -212,31 +212,6 @@ void vec_resize(vector* vec, size_t size) {
 }
 
 /**
- * @brief Function to reserve the vector to the given size.
- * @param vec The vector.
- * @param size The new size of the vector.
- * Time complexity: O(n)
- */
-void vec_reserve(vector* vec, size_t size) {
-   assert(size >= 0 && "Size must be non negative");
-   size_t capacity = vec->capacity;
-   // If the size is less than the current capacity, then do nothing.
-   if (size <= capacity) return;
-   // If the size is greater than the current capacity, then resize the vector.
-   __force_reserve_to(vec, size);
-}
-
-/**
- * @brief Function to shrink the vector to the given size.
- * @param vec The vector.
- * @param size The new size of the vector.
- * Time complexity: O(n)
- */
-void vec_shrink_to_fit(vector* vec) {
-   __force_reserve_to(vec, vec->size);
-}
-
-/**
  * @brief Function to remove the last element from the vector.
  * @param vec The vector.
  * Time complexity: O(1)
@@ -395,57 +370,6 @@ void vec_insert_rng(vector* vec, void* pos, void* start, void* end) {
       // Copying the data to the position.
       memcpy(pos, start, end - start);
       vec->size += (end - start) / vec->element_size;
-   }
-}
-
-/**
- * @brief Function to assign the vector to the given size and fill it with the given data.
- * @param vec The vector.
- * @param n The new size of the vector.
- * @param data The data to fill.
- * Time complexity: O(n)
- */
-void vec_assign(vector* vec, size_t n, void* data) {
-   assert(n >= 0 && "n must be non negative");
-   // Destroying each item in the vector, but not freeing the vector.
-   __vec_destroy_each_item(vec);
-   // If the size is greater than the current capacity, then resize the vector.
-   if (n > vec->capacity) {
-      __force_resize_to(vec, n);
-   }
-   // Copying the data to the vector.
-   void* dest = vec->data;
-   vec->size = n;
-   for (size_t i = 0; i < n; i++) {
-      memcpy(dest, data, vec->element_size);
-      dest += vec->element_size;
-   }
-}
-
-/**
- * @brief Function to assign the vector to the given range and fill it with the given data.
- * @param vec The vector.
- * @param start The start pointer.
- * @param end The end pointer.
- * Time complexity: O(n)
- */
-void vec_assign_rng(vector* vec, void* start, void* end) {
-   size_t element_size = vec->element_size;
-   size_t size = (end - start) / element_size;
-   assert(size >= 0 && "Size must be non negative");
-   // Destroying each item in the vector, but not freeing the vector.
-   __vec_destroy_each_item(vec);
-   // If the size is greater than the current capacity, then resize the vector.
-   if (size > vec->capacity) {
-      __force_resize_to(vec, size);
-   }
-   // Copying the data to the vector.
-   void* dest = vec->data;
-   vec->size = size;
-   for (size_t i = 0; i < size; i++) {
-      memcpy(dest, start, element_size);
-      dest += element_size;
-      start += element_size;
    }
 }
 
