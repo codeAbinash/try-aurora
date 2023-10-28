@@ -52,7 +52,7 @@ function App() {
         </a>
         <div className="bg-gray-950 text-white gap-5 p-2 px-7 rounded-full flex">
           <p className="custom-font font-medium">
-            Highted {(code.match(/\n/g) || []).length} lines in{" "}
+            Highlighted {(code.match(/\n/g) || []).length} lines in{" "}
             <span className="text-yellow-400">
               ✨ {highlightingTime.toFixed(1)} ms
             </span>
