@@ -15,6 +15,7 @@
 .custom-font * {
   font-family: "Source Code Pro", "Cascadia Code", "Consolas", "Courier New",
     "Courier", "monospace";
+  font-variant-ligatures: none;
 }
 
 .custom-scrollbar::-webkit-scrollbar {

@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aurora-code": "^1.0.0",
-    "aurora-react": "^1.0.0",
+    "aurora-code": "latest",
+    "aurora-react": "latest",
     "emoji-store": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
