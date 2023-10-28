@@ -41,8 +41,8 @@ function App() {
   }, []);
 
   return (
-    <div className="gap-5 min-h-[100dvh] flex-col flex justify-center items-center bg-gray-800">
-      <div className="flex gap-3 justify-center items-center flex-wrap px-5 pt-5 text-xs lg:text-sm">
+    <div className="gap-5 min-h-[100dvh] flex-col flex items-center bg-gray-800">
+      <div className="flex gap-3 justify-center items-center flex-wrap px-5  mt-4 lg:pt-8 text-xs lg:text-sm">
         <a
           href="https://github.com/codeAbinash/aurora-react"
           target="_blank"
@@ -72,7 +72,7 @@ function App() {
         })}
       </div>
       <div className="px-5 w-full">
-        <div className="rounded-xl overflow-hidden w-full max-w-[100rem] h-[80dvh] mx-auto">
+        <div className="rounded-xl overflow-hidden w-full max-w-[100rem] h-[85dvh] mx-auto">
           <div className="grid  text-sm lg:text-base grid-cols-1 lg:grid-cols-2 space-between h-full bg-gray-900 font-medium text-gray-300 custom-font">
             <div
               className="p-7 overflow-scroll custom-scrollbar z-10 h-[40dvh] lg:h-full"
