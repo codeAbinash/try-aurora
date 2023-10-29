@@ -2,9 +2,11 @@
  * Aurora ✨: The C code highlighting engine
  * Author 🧑🏻‍💻: Abinash Karmakar (codeAbinash)
  * Lightweight ✨ - 3kB only (gzipped) 🎉
- * Blazing fast ⚡ - 1000 lines in 4ms 🚀
+ * Blazing fast ⚡ - 1000 lines in 5ms 🚀
  * 2023-10-26 📅
  */
+
+// Try typing some C code next to this box 👉🏻
 
 // 1. Header File Highlighting
 #include <stdio.h>
