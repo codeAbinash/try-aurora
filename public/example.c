@@ -6,7 +6,7 @@
  * 2023-10-26 📅
  */
 
-// Try typing some C code next to this box 👉🏻
+// Try typing some C code in the textarea there 👉🏻
 
 // 1. Header File Highlighting
 #include <stdio.h>
