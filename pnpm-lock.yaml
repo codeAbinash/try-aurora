@@ -7,10 +7,10 @@ settings:
 dependencies:
   aurora-code:
     specifier: latest
-    version: 1.0.1
+    version: 2.0.0
   aurora-react:
     specifier: latest
-    version: 1.0.0(aurora-code@1.0.1)(react-dom@18.2.0)(react@18.2.0)
+    version: 2.0.0(aurora-code@2.0.0)(react-dom@18.2.0)(react@18.2.0)
   emoji-store:
     specifier: ^2.0.0
     version: 2.0.0
@@ -735,18 +735,18 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /aurora-code@1.0.1:
-    resolution: {integrity: sha512-2sMO9T9RqVZA6OSk5/SVtEtP5yWiK3VdQLAQdN6bISLRc2vOHML0cPmwsLWi370AASevx1uCfIcm1RDe3MbGhg==}
+  /aurora-code@2.0.0:
+    resolution: {integrity: sha512-cdZOp5aLW9qXitZhvjP7CCvWlayRIKTLjuVjCV+7cu1OS/WocSJbn0uu7eEw/z33wMa3gB94c7+BPDTRglYiLA==}
     dev: false
 
-  /aurora-react@1.0.0(aurora-code@1.0.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-gLkXnq6q9ZJHsvJmKsgtAqqqtJwoVmW/WFDAIJkTMwn8Pt+E8k7GZ96AYZaDSGea2slQYucrYMUsfPS8Pp4oPw==}
+  /aurora-react@2.0.0(aurora-code@2.0.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-85VzCefzqHzMnH5GsGqKdgPJWRKOePslUoECfl8LWv8uEZfpxwMDj8hjBcIpvO95GvPiv1JXBQ24BEgiay/iPA==}
     peerDependencies:
-      aurora-code: ^1.0.0
+      aurora-code: latest
       react: ^18.2.0
       react-dom: ^18.2.0
     dependencies:
-      aurora-code: 1.0.1
+      aurora-code: 2.0.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
