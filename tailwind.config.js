@@ -1,12 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "node_modules/codeabinash-test-button/dist/index.js",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', 'node_modules/codeabinash-test-button/dist/index.js'],
   theme: {
     extend: {},
   },
-  plugins: [],
-};
+  plugins: [require('@tailwindcss/typography')],
+}
