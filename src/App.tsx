@@ -116,7 +116,7 @@ function App() {
 
 function TokensArea({ code }: { code: string }) {
   const [tokens, setTokens] = useState<Node[]>([])
-  const [isTokenShown, setIsTokenShown] = useState(false)
+  const [isTokenShown, setIsTokenShown] = useState(true)
 
   useEffect(() => {
     if (!isTokenShown) return
