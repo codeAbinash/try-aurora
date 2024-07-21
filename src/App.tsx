@@ -96,6 +96,7 @@ function App() {
               tabIndex={-1}
               spellCheck={false}
               value={code}
+              autoFocus={true}
               onInput={(e) => {
                 setCode(e.currentTarget.value)
               }}
@@ -116,7 +117,7 @@ function App() {
 
 function TokensArea({ code }: { code: string }) {
   const [tokens, setTokens] = useState<Node[]>([])
-  const [isTokenShown, setIsTokenShown] = useState(true)
+  const [isTokenShown, setIsTokenShown] = useState(false)
 
   useEffect(() => {
     if (!isTokenShown) return
@@ -134,7 +135,10 @@ function TokensArea({ code }: { code: string }) {
           >
             Show Tokens
           </button>
-          <p className='text-center text-sm text-gray-400'>Showing tokens will require more computation.</p>
+          <div>
+            <p className='text-center text-sm text-gray-400'>Showing tokens will require more computation.</p>
+            <p className='text-center text-sm text-yellow-400'>Try typing in the editor on the left side.</p>
+          </div>
         </div>
       </div>
     )
